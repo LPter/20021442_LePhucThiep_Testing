@@ -1,4 +1,3 @@
-
 function handleClickTest(password, confirmPassword) {
     const num = Number(password);
     let flag = false;
