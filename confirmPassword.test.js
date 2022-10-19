@@ -68,19 +68,29 @@ const handleClickTest = require('./index');
 //     expect(handleClickTest('abcdefg', '1abcde')).toBe("Password is invalid");
 // })
 
-// 4 test case kiểm thử dòng điều khiển
+// // 4 test case kiểm thử dòng điều khiển
+// test('password: 123456, confirmPassword: 123456', () => {
+//     expect(handleClickTest('123456', '123456')).toBe("Confirm password success");
+// })
+
+// test('password: 123456, confirmPassword: 156111', () => {
+//     expect(handleClickTest('123456', '156111')).toBe("ConfirmPassword must matches");
+// })
+
+// test('password: abcdefg, confirmPassword: abcdefg', () => {
+//     expect(handleClickTest('abcdefg', 'abcdefg')).toBe("Password is invalid");
+// })
+
+// test('password: abcdefg, confirmPassword: 1abcde', () => {
+//     expect(handleClickTest('1234567', 'abcdefa')).toBe("Password is invalid");
+// })
+
+// 2 test case kiểm thử dòng dữ liệu
+
 test('password: 123456, confirmPassword: 123456', () => {
     expect(handleClickTest('123456', '123456')).toBe("Confirm password success");
 })
 
-test('password: 123456, confirmPassword: 156111', () => {
-    expect(handleClickTest('123456', '156111')).toBe("ConfirmPassword must matches");
-})
-
 test('password: abcdefg, confirmPassword: abcdefg', () => {
     expect(handleClickTest('abcdefg', 'abcdefg')).toBe("Password is invalid");
-})
-
-test('password: abcdefg, confirmPassword: 1abcde', () => {
-    expect(handleClickTest('1234567', 'abcdefa')).toBe("Password is invalid");
 })
